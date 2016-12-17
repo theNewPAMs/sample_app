@@ -22,3 +22,6 @@
 
 # Ignore Spring files.
 /spring/*.pid
+.idea/dataSources.local.xml
+.idea/dataSources.xml
+.idea/dataSources/
