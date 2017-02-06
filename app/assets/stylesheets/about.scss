@@ -64,3 +64,70 @@
 .fa{
   color: #b000b0
 }
+
+/* What learners says about us */
+.about h3{
+  margin-top: 24px;
+  font-size:28px;
+  color: #2f2f2f;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+}
+.about p{
+  font-size: 13px;
+  line-height: 22px;
+  color: #666666;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.about1 h3, .about2 h3{
+  font-size: 20px;
+}
+pic1Ab{
+  float: right;
+  padding: 40px;
+  padding-top: 51px;
+  padding-right: 37px;
+  padding-bottom: 39px;
+}
+
+pic2Ab{
+  float: left;
+  padding: 40px;
+  padding-top: 51px;
+  padding-right: 37px;
+  padding-bottom: 39px;
+}
+.about1{
+  float: right;
+  text-align: right;
+}
+
+.about2{
+  float: left;
+  text-align: left;
+}
+.horL {
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 1170px;
+  height: 254px;
+  content: '';
+  z-index: 30;
+  background: image_url('horL.png') no-repeat;
+}
+
+/* Media Query */
+@media screen and (max-width: 1190px){
+  .horL {
+    display:none;
+  }
+
+}
