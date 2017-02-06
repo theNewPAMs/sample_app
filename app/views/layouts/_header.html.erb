@@ -1,12 +1,57 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="container">
-    <%= link_to "sample app", root_path, id: "logo" %>
-    <nav>
-        <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
-        <li><%= link_to "Help",   help_path %></li>
-        <li role="presentation" class="active"><%= link_to "Log in", '#' %></li>
-      </ul>
-    </nav>
+<nav class="navbar navbar-main">
+
+  <div class="navbar-header">
+    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsemenu" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a href = "<%= root_url %>"><img class="navbar-brand" src="<%= image_url('logo.png') %>" alt="logo">
+    </a>
   </div>
-</header>
+  <div class="collapse navbar-collapse" id="collapsemenu">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <%= link_to "About", about_url ,'aria-haspoup' => 'true' %>
+        </li>
+
+        <li>
+          <%= link_to "Programs", root_url ,'class' => 'dropdwon-toggle', 'role'=>'button','area-expanded'=>'false','aria-haspoup' => 'true' %>
+          <ul class="dropdown-menu">
+            <li>
+              <%= link_to "Tutoring", root_url ,'aria-haspoup' => 'true' %>
+            </li>
+
+            <li>
+              <%= link_to "Mentoring", root_url ,'aria-haspoup' => 'true' %>
+            </li>
+            <li>
+              <%= link_to "Career Guidance", root_url ,'aria-haspoup' => 'true' %>
+            </li>
+            <li>
+              <%= link_to "Projects", root_url ,'aria-haspoup' => 'true' %>
+              <ul>
+                <li>
+                  <%= link_to "Computer Laboratory", root_url ,'aria-haspoup' => 'true' %>
+                </li>
+              </ul>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <%= link_to "Mentors", root_url ,'aria-haspoup' => 'true' %>
+        </li>
+        <li>
+          <%= link_to "FAQ", root_url ,'aria-haspoup' => 'true' %>
+        </li>
+        <li class="active">
+          <%= link_to "Sign in", root_url ,'aria-haspoup' => 'true' %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

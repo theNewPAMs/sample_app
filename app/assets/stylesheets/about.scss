@@ -1,0 +1,66 @@
+/* Who we are*/
+.about-us{
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+/* Team */
+.team{
+  text-align:center;
+  margin-top: 46px;
+}
+.team .b1{
+  padding-left:0;
+}
+.team .b3{
+  padding-right:0;
+}
+.team img{
+  margin:0 auto;
+}
+.team h4{
+  margin-top: 24px;
+  font-size:20px;
+  color:#2f2f2f;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+}
+.team h5{
+  margin-top: -3px;
+  font-size:13px;
+  color:#a9a9a9;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+}
+.team p{
+  margin-top: 12px;
+  font-size: 13px;
+  color: #666;
+  font-family: 'Roboto', 'sans-serif';
+  font-weight: 300;
+  line-height: 24px;
+
+}
+.team ul{
+  margin-top: 2px;
+  padding-left:0px;
+  display: inline-block;
+  margin:0 auto;
+}
+.team ul li{
+  padding:0 10px;
+  float:left;
+  list-style:none;
+  font-family: FontAwesome;
+  font-size:15px;
+}
+.team ul li a{
+  color:#2f2f2f;
+}
+.team ul li a:hover{
+  color:#1fcdff;
+}
+.fa{
+  color: #b000b0
+}
