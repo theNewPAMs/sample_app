@@ -1,14 +1,33 @@
+/*-----------------------------------------------------------------------------------------------------------------
+
+@package: Paranormalminds
+@author: Mbele Lebohang
+@version: 1.0
+
+-------------------------------------------------------------------------------------------------------------------*/
+
+/*========================================================================
+  Imports & Variables
+==========================================================================*/
+/* Imports */
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 /* mixins, variables, etc. */
-
+$color_main : #b000b0 ; // main purple
+$color_secondary : darken($color_main, 10%) ; // dark purple
 $gray-medium-light: #eaeaea;
 
-/* universal */
+$font_main : 'Roboto', sans-serif;
+$font_titles : 'Dosis', sans-serif;
+
+/*======================================================================= 
+  universal 
+=========================================================================*/
 
 body {
   max-width: 1200px;
+  font-family: $font-main;
   position: relative;
   margin: 0 auto;
   background: image_url('bg.jpg'); 
@@ -41,12 +60,14 @@ textarea {
   background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(176, 0, 176, 1), rgba(0,0,0,0));
 }
 
-/* typography */
+/*=============================================================== 
+   typography 
+=================================================================*/
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
   color:#2f2f2f;
-  font-family: 'Roboto', 'sans-serif';
+  font-family: $font_titles;
 }
 
 h1 {
@@ -80,21 +101,84 @@ p {
 }
 
 a {
-  color: #000;
+  color: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+  }
 }
-/* Navigation bar */
+
+/*=====================================================================
+ Navigation bar 
+=======================================================================*/
 .navbar {
   border-radius: 0;
   margin: 0;
 }
 .navbar-main{
   background-color: #fff;
-  border-bottom: 3px solid #b000b0;
+  border-bottom: 3px solid $color_main;
   padding: 5px 15px;
+
+    a:hover,
+    a:active,
+    a:focus,
+    a.is-active {
+      background: none !important;
+      color: inherit;
+      border-bottom: 2px solid $color_main;
+    }
+    .submenu {
+      position: absolute;
+      list-style: none;
+      background:$color_main;
+      padding: 0;
+      width: 125px;
+      left: 10px;
+      visibility: hidden;
+      top:85px;
+      color: $gray-medium-light; 
+      @include transition(all, .05s);
+
+      li {
+        border-top: 1px solid darken($color_main, 10%);
+        &:hover {
+          background:darken($color_main, 10%);
+          @include transition(all, .3s);
+        }
+        a {
+          width: 100%;
+          border-bottom: none;
+          text-decoration: none;
+          padding: 5px 25px;
+          display:block;
+          font-size: 16px;
+         }
+       }
+    }
+}
+li {  
+  a {
+    padding: 10px 15px ;
+    border-bottom: 2px solid transparent ;
+  }
+  &:hover {
+    .submenu {
+      top: 45px;
+      visibility: visible;
+      @include transition(all, .5s);  
+    }
+  }
+}
+.active-button{
+  background-color:$color_main;
+  color: $gray-medium-light;
 }
 
 .navbar-main .navbar-nav > .active > a {
-  background-color: #b000b0;
+  background-color: $color_main;
   color: $gray-medium-light;
 }
 
@@ -112,7 +196,9 @@ a {
   padding: 0;
   margin: 0;
 }
-
+.icon-bar {
+    background: $color_main;
+}
 
 /* header */
 
