@@ -132,7 +132,6 @@ h2 {
 h3{
   font-size:28px;
   font-weight: 300;
-  font-variant: small-caps;
 }
 h4{
   margin-top: 15px;
@@ -297,5 +296,113 @@ footer {
   }
 }
 .social-media{
+  text-align: center;
+  padding: 0;
   background-color: $color_main;
+
+  .fa {
+    color: $gray-medium-light;
+  }
+
+  ul{
+    margin: 0;
+    padding: 5px;
+    
+    li{
+      margin: 5px -10px;
+      padding: 0;
+      list-style: none outside none;
+      display: inline-block;
+    }
+  }
+
+  .social-btn { /* global button class */
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      width: 45px;
+      height: 45px;
+      border:2px solid #ddd; /* add border to the buttons */
+      padding: 0px;
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      font-weight: normal;
+      line-height: 2em;
+      border-radius: 25px;
+      -moz-border-radius:27px;
+      -webkit-border-radius:27px;
+  }
+
+  .facebook-btn{
+      background: $color_secondary;
+  }
+
+  .facebook-btn:before{
+      font-family: "FontAwesome";
+      content: "\f09a";
+  }
+
+  .facebook-btn:hover{
+      color: $color_secondary;
+      background: #fff;
+      border-color: $color_secondary;
+  }
+  .twitter-btn{
+    background: $color_secondary;
+  }
+
+  .twitter-btn:before{
+        font-family: "FontAwesome";
+        content: "\f099";
+        
+  }
+
+  .twitter-btn:hover{
+        color: $color_secondary;
+        background: #fff;
+        border-color: $color_secondary;
+  }
+  .linkedin-btn{
+    background: $color_secondary;
+  }
+
+  .linkedin-btn:before{
+        font-family: "FontAwesome";
+        content: "\f0e1";
+  }
+
+  .linkedin-btn:hover{
+        color: $color_secondary;
+        background: #fff;
+        border-color: $color_secondary;
+  }
+  .fa-youtube{
+    background: $color_secondary;
+  }
+
+  .fa-youtube:before{
+        font-family: "FontAwesome";
+  }
+
+  .fa-youtube:hover{
+        color: $color_secondary;
+        background: #fff;
+        border-color: $color_secondary;
+  }
+  .fa-github{
+    background:$color_secondary;
+  }
+
+  .fa-github:before{
+        font-family: "FontAwesome";
+  }
+
+  .fa-github:hover{
+        color: $color_secondary;
+        background: #fff;
+        border-color: $color_secondary;
+  }
 }
+
