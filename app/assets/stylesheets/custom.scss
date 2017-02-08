@@ -103,7 +103,19 @@ textarea {
     margin-top: 10px;
   }
 }
-
+a.btn {
+  font-size: 1.2em;
+  text-decoration: none;
+  font-variant: small-caps;
+  color: $color_secondary;
+  border:2px solid $color_secondary;
+  padding: 4px 15px;
+  transition: background-color 0.5s;
+  border-radius: 5px;
+}
+a.btn:hover {
+  background-color: rgba(175,0,175,0.7);
+}
 /*=============================================================== 
    typography 
 =================================================================*/
@@ -244,7 +256,9 @@ li {
     background: $color_main;
 }
 
-/* header */
+/*===================================================================================
+  header 
+ =====================================================================================*/
 
 #logo {
   float: left;
@@ -260,8 +274,73 @@ li {
     text-decoration: none;
   }
 }
+/*====================================================================================== 
+  Pages 
+======================================================================================== */
 
-/* footer */
+.page-heading {
+
+  background: image-url("pages-bg-header.jpg") no-repeat center;
+  background-size: cover;
+  min-height: 300px;
+  color: #fff;
+  position: relative;
+  padding: 25px 15px;
+  margin-bottom: 10px;
+}
+.page-description {
+  font-size: 18px;
+}
+/*===================================================================================
+  Animations
+=====================================================================================*/
+.animated {
+  visibility: visible;
+  -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    &.slow {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+  &.fadeIn {
+
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+  }
+}
+
+// zoomIn
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+/*======================================================================================= 
+  footer 
+  =======================================================================================*/
 
 footer {
   margin-top: 45px;
