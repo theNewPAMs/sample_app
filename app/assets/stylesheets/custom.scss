@@ -188,6 +188,7 @@ a {
     }
     .submenu {
       position: absolute;
+      z-index: 1;
       list-style: none;
       background:$color_main;
       padding: 0;
@@ -201,6 +202,7 @@ a {
       li {
         border-top: 1px solid darken($color_main, 10%);
         &:hover {
+          margin-top: 10px;
           background:darken($color_main, 10%);
           @include transition(all, .3s);
         }
@@ -222,7 +224,7 @@ li {
   }
   &:hover {
     .submenu {
-      top: 45px;
+      top: 50px;
       visibility: visible;
       @include transition(all, .5s);  
     }
@@ -283,7 +285,6 @@ li {
   background: image-url("pages-bg-header.jpg") no-repeat center;
   background-size: cover;
   min-height: 300px;
-  color: #fff;
   position: relative;
   padding: 25px 15px;
   margin-bottom: 10px;
@@ -291,6 +292,7 @@ li {
 .page-description {
   font-size: 18px;
 }
+
 /*===================================================================================
   Animations
 =====================================================================================*/
@@ -362,7 +364,7 @@ footer {
   }
 }
 .contact-us{
-  background-color: rgba(0,0,0,0.3);
+  background: image_url('footer-bg.jpg');
   padding: 15px;
   a{
     color: $color_main;
