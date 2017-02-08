@@ -18,14 +18,14 @@
         </li>
 
         <li class="has-child">
-          <a href="#">Programs</a>
+          <%= link_to "Programs", programs_url ,'aria-haspoup' => 'true' %>
           <ul class="submenu">
             <li class="submenu-item">
               <%= link_to "Tutoring", root_url ,'aria-haspoup' => 'true' %>
             </li>
 
             <li class="submenu-item">
-              <%= link_to "Mentoring", root_url ,'aria-haspoup' => 'true' %>
+              <%= link_to "Mentoring", programs_mentoring_url ,'aria-haspoup' => 'true' %>
             </li>
             <li class="submenu-item">
               <%= link_to "Career Guidance", root_url ,'aria-haspoup' => 'true' %>
@@ -37,7 +37,7 @@
         </li>
 
         <li>
-          <%= link_to "Mentors", root_url ,'aria-haspoup' => 'true' %>
+          <%= link_to "Careers", root_url ,'aria-haspoup' => 'true' %>
         </li>
         <li>
           <%= link_to "FAQ", root_url ,'aria-haspoup' => 'true' %>

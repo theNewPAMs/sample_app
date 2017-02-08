@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
+
+  def mentoring
+  end
+
+  def programs
+  end
 end
